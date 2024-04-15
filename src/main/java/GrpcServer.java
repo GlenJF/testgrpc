@@ -11,7 +11,7 @@ GrpcServer extends StreamingServerServiceGrpc.StreamingServerServiceImplBase  {
     @Override
     public void sendUnaryRequest(UnaryRequest request, StreamObserver<UnaryResponse> responseObserver) {
         String clientName = request.getName();
-        String message = "Hello, " + clientName + "! This is a unary response from the server";
+        String message = "Hello world! " + clientName + "! This is a unary response from the server";
         UnaryResponse response = UnaryResponse.newBuilder()
                 .setMessage(message)
                 .build();
